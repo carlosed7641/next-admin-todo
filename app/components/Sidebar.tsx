@@ -50,16 +50,16 @@ export const Sidebar = async () => {
     const userRole = session?.user?.roles;
 
     return (
-        <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+        <aside className="ml-[-100%] fixed overflow-y-auto z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
             <div>
                 <div className="-mx-6 px-6 py-4">
-                    <Link href="#" title="home">
+                    <Link href="/" title="home">
                         <Image src="https://tailus.io/sources/blocks/stats-cards/preview/images/logo.svg" width={128} height={128} className="w-32" alt="tailus logo" />
                     </Link>
                 </div>
 
                 <div className="mt-8 text-center">
-                    <Image src={avatarUrl} width={40} height={40} alt="" className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
+                    <Image src={avatarUrl} width={220} height={220} alt="" className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
                     <h5 className="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">{userName}</h5>
                     <span className="hidden text-gray-400 lg:block capitalize">{userRole?.join(',')}</span>
                 </div>

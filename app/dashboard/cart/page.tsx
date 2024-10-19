@@ -32,8 +32,8 @@ export default function CartPage() {
 
     const cookiesStore = cookies()
     const cart = JSON.parse(cookiesStore.get("cart")?.value ?? "{}") as { [key: string]: number }
-     const productsInCart = getProductsInCart(cart)
-     const total = productsInCart.reduce((acc, item) => acc + item.product.price * item.quantity, 0)
+    const productsInCart = getProductsInCart(cart)
+    const total = productsInCart.reduce((acc, item) => acc + item.product.price * item.quantity, 0)
 
     return (
         <div>

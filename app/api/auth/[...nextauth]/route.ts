@@ -26,7 +26,7 @@ export const authOptions = {
       name: "Credentials",
       credentials: {
         username: { label: "Correo electrónico", type: "email", placeholder: "user@email.com" },
-        password: { label: "Contraseña", type: "password" }
+        password: { label: "Contraseña", type: "password", placeholder: "Escribe tu contraseña" }
       },
       async authorize(credentials) {
   
@@ -64,7 +64,7 @@ export const authOptions = {
       return token
     },
 
-    async session({ session , token} : { session: Session, token: JWT }) {
+    async session({ session , token } : { session: Session, token: JWT }) {
       if (session && session.user) {
           session.user.roles = token.roles
           session.user.id = token.id

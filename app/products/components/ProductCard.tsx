@@ -38,7 +38,7 @@ export const ProductCard = ({ id, name, price, rating, image }: Props) => {
             height={500}
             className="rounded" 
             src={image} 
-            alt="product image" />
+            alt={name} />
       </div>
       
       {/* Title */}

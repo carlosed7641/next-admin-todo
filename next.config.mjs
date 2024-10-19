@@ -7,13 +7,13 @@ const nextConfig = {
                 hostname: 'tailus.io'
             },
             {
-               protocol: 'https',
+                protocol: 'https',
                 hostname: 'avatars.githubusercontent.com'
             },
             {
-                protocol: 'https',
+                 protocol: 'https',
                  hostname: 'lh3.googleusercontent.com'
-             }
+            }
         ]
     }
 };
